@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font: 2rem Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+}
+header{
+    top: 0;
+    
+}
+footer{
+    bottom: 0;
+}
+header,footer{
+    background-color: darkblue;
+    color: aliceblue;
+    text-align: center;
+    padding: 1rem;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    /* grid-template-columns: 100%; */
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.carDiv{
+    position: relative;
+    border-bottom: 0.35rem solid black;
+}
+.wheel img{
+    border-radius: 50%;
+    width: 11rem;
+    height: 11rem;
+}
+.wheel1{
+    position: absolute;
+    top: 14.5rem;
+    left: 5.7rem;
+}
+.wheel2{
+    position: absolute;
+    top: 14.5rem;
+    right: 7.7rem;
+}
+
+.wheel1,.wheel2{
+    animation-name: rotate;
+    animation-duration: 0s;
+    animation-timing-function: linear;
+    animation-delay: 0.85s;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.Car{
+    animation-name: updown;
+    animation-duration: 0s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes updown{
+    0%{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateY(2px);
+    }
+}
+.btns{
+    margin: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.btn,.stopbtn{
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 0.75rem;
+}
+.btn{
+    background-color: green;
+    color: aliceblue;
+}
+.stopbtn{
+    background-color: red;
+    color: aliceblue;
+}
+.speedup,.speeddown{
+    border-radius: 15px;
+    /* width: max(3vw,7rem); */
+    font-size: 2rem;
+    word-wrap: break-word;
+}
+.speedup{
+    color: aliceblue;
+    background-color: dodgerblue;
+}
+.speeddown{
+    color: dodgerblue;
+    background-color: aliceblue;
+}

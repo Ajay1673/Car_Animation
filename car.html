@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="car.css" rel="stylesheet">
+    <title>Car</title>
+</head>
+<body>
+    <header>
+        <h1>Moving Car</h1>
+    </header>
+    <main>
+        <div class="carDiv">
+            <img class="Car" src="images/car.png" alt="car">
+            <div class="wheel wheel1">
+                <img src="images/wheel.jpeg" alt="wheel1">
+            </div>
+            <div class="wheel wheel2">
+                <img src="images/wheel.jpeg" alt="wheel">
+            </div>
+        </div>
+        <!-- <div class="road"></div> -->
+        <div class="btns">
+            <button class="btn" onclick="move()">Move</button>
+            <button class="speedup" onclick="speedUp()">SpeedUp</button>
+            <button class="speeddown" onclick="speedDown()">SpeedDown</button>
+            <button class="stopbtn" onclick="stop()">Stop</button>
+        </div>
+    </main>
+    <footer>
+        <h2>&copy; Aj Motors</h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
